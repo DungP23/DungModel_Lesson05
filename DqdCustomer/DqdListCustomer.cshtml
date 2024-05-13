@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Danh sach khach hang";
+    var list = ViewBag.list;
+    int stt = 0;
+}
+
+<h2>Danh sach khach hang</h2>
+<div class="row">
+    <table class=" table table-bordered">
+        <thead>
+            <tr>
+                <th> #</th>
+                <th> Ma so</th>
+                <th> Ho va Ten </th>
+                <th> Dia Chi</th>
+                <th> Nam Sinh</th>
+                <th> Chuc nang</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in list)
+            {
+                stt++;
+            <tr>
+                <td>@stt</td>
+                <td>@item.customerid</td>
+                <td>@item.firstname @item.lastname</td>
+                <td>@item.address</td>
+                <td>@item.yearObirth</td>
+                <td>
+                    <a href="#"> Edit</a>
+                    <a href="#"> Delete</a>
+                    
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
